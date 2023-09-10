@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-image: url('wp2986094-luffy-and-zoro-wallpapers.jpg');
+            background-size: cover;
+        }
+        #login{
+            border: 1px solid #ededed;
+            border-radius: 10px;
+            width: 400px;
+            padding: 20px;
+            background-color: #081b29;
+            color: #ededed;
+        }
+        #login input[type="email"],
+        #login input[type="password"] {
+            width: 100%;
+            margin: 5px;
+            box-sizing: border-box;
+            border: 1px solid rgb(red, green, blue);
+            border-radius: 10px;
+            padding: 12px 20px;
+            font-size: 16px;
+
+        }
+        #login label{
+            float: left;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 5px;
+        }
+        #login button[type="submit"]{
+            width: 100%;
+            padding: 12px 20px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            color: #ededed;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 5px;
+            
+        }
+
+        a{
+            text-decoration: none;
+            color: #007bff;
+        }
+        .loading{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            
+        }
+        .spinner{
+            border: 2px solid white;
+            border-top: 2px solid red ;
+            border-radius: 90%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+
+        }
+        @keyframes spin{
+            to{
+                transform: rotate(360deg);
+            }
+        }
+
+        h1{
+            text-align: center;
+            width: 100%;
+        }
+        h1 img{
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+        <form id="login">
+            <h1><a href="anime-stream.html"><img src="logo.png" alt="logo"></a></h1>
+            <hr>
+            <label for="email">E-Mail</label>
+            <input type="email" name="email" id="email" placeholder="E-Mail" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" required >
+            <span id="error"></span>
+            <button type="submit" onclick="return validatePassword()">Log In</button>
+            <a href="forgot-pass.html">Forgot password?</a>
+            <p>Don't have an account?<a href="signup.html">Sign-Up</a></p>
+        </form>
+        <div class="loading">
+            <div class="spinner"></div>
+        </div>
+
+
+    <script>
+        function validatePassword() {
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        const error = document.getElementById('error');
+
+  // Validate email address
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email.length === 0) {
+          error.innerHTML = "Email must not be empty.";
+          error.style.color = "red";
+          return false;
+      } 
+        else if (!emailRegex.test(email)) {
+          error.innerHTML = "Please enter a valid email address.";
+          error.style.color = "red";
+          return false;
+      }
+
+  // Validate password
+        if (password.length < 8) {
+          error.innerHTML = "Password must be at least 8 characters long.";
+          error.style.color = "red";
+          return false;
+      }
+
+  // Clear error message if validation passes
+        error.innerHTML = "";
+        return true;
+    }
+
+
+        let form = document.querySelector('#login');
+        let load = document.querySelector('.loading');
+
+        form.addEventListener('submit', (e)=>{
+            e.preventDefault();
+            load.style.display = "flex";
+
+            setTimeout(() => {
+                window.location.href = 'anime-stream.html';
+            }, 3000)
+        })
+    </script>
+</body>
+</html>

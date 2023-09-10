@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+body{
+background-image:url("https://w0.peakpx.com/wallpaper/413/391/HD-wallpaper-beautiful-green-nature-forest-house-green-grass-nature-trees-sky-landscape.jpg");
+background-size: cover;
+background-repeat:no-repeat;}
+.notifications-container {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: black;
+  color: white;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notifications-container h1 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+a h1 img{
+width: 70%;}
+.notifications-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid white;
+}
+
+
+
+.notifications-container li {
+  border-bottom: 1px solid white;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+}
+
+.notifications-container li:last-child {
+  border-bottom: none;
+}
+
+.notifications-container li.seen {
+  background-color: grey;
+  color: white;
+}
+
+.notifications-container .text {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.notifications-container .date {
+  color: white;
+}
+
+.load-more-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mark-all-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mark-all-container button {
+  margin: 0 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #3b5998;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.mark-all-container button:hover {
+  background-color: #2e467c;
+}
+</style>
+</head>
+<body>
+<div class="notifications-container">
+<a href="anime-stream.html" ><h1><img src="logo.png" ></h1></a>
+<hr>
+  <h1>Notifications</h1>
+  <ul id="notification-list">
+    <!-- Notification items will be dynamically added here -->
+  </ul>
+  <div class="load-more-container">
+    <button id="load-more" >Load more notifications</button>
+  </div>
+  <div class="mark-all-container">
+    <button id="mark-all-seen" >Mark all as seen</button>
+    <button id="mark-all-unseen">Mark all as unseen</button>
+  </div>
+</div>
+<script type="text/javascript">
+const notifications = [
+  {
+    id: 1,
+    text: 'Please contact us if you need ny help! Click this for our <a href="about.html" style="text-decoration:none; color: blue;">contact Information</a>.',
+    date: new Date(),
+    seen: false
+  },
+  {
+    id: 2,
+    text: 'Please <a href="signup-real.html" style="text-decoration:none; color: blue;">signup</a> for a better experience.',
+    date: new Date(),
+    seen: false
+  },
+  {
+    id: 3,
+    text:
+      "Thank You for using our site!!",
+    date: new Date(),
+    seen: false
+  }
+  // ... more notifications
+];
+
+const MAX_NOTIFICATIONS = 50;
+let startIndex = 0;
+
+function renderNotifications() {
+  const notificationList = document.getElementById("notification-list");
+  notificationList.innerHTML = "";
+  const endIndex = Math.min(
+    startIndex + MAX_NOTIFICATIONS,
+    notifications.length
+  );
+  for (let i = startIndex; i < endIndex; i++) {
+    const notification = notifications[i];
+    const listItem = document.createElement("li");
+    listItem.innerHTML = `
+      <div class="text">${notification.text}</div>
+      <div class="date">${formatDate(notification.date)}</div>
+    `;
+    if (notification.seen) {
+      listItem.classList.add("seen");
+    }
+    listItem.addEventListener("click", () => {
+      listItem.classList.add("seen");
+      notification.seen = true;
+      // TODO: Handle notification click event
+    });
+    notificationList.appendChild(listItem);
+  }
+  const loadMoreButton = document.getElementById("load-more");
+  if (endIndex >= notifications.length) {
+    loadMoreButton.style.display = "none";
+  } else {
+    loadMoreButton.style.display = "block";
+  }
+}
+// Get a reference to the "Mark all as seen" button element
+const markAllSeenBtn = document.getElementById('mark-all-seen');
+
+// Add a click event listener to the button
+markAllSeenBtn.addEventListener('click', function() {
+  // Get a reference to the list element
+  const list = document.getElementById('notification-list');
+
+  // Loop through all the list items and change their background color
+  for (let i = 0; i < list.children.length; i++) {
+    list.children[i].style.backgroundColor = 'gray';
+     list.children[i].style.color = 'black';
+  }
+});
+
+//ALL Unseen button
+const markAllUnseenBtn = document.getElementById('mark-all-unseen');
+
+// Add a click event listener to the button
+markAllUnseenBtn.addEventListener('click', function() {
+  // Get a reference to the list element
+  const list = document.getElementById('notification-list');
+
+  // Loop through all the list items and change their background color
+  for (let i = 0; i < list.children.length; i++) {
+    list.children[i].style.backgroundColor = 'black';
+     list.children[i].style.color = 'white';
+  }
+});
+
+function formatDate(date) {
+  const diff = Date.now() - date.getTime();
+  const seconds = Math.floor(diff / 1000);
+  if (seconds < 60) {
+    return "just now";
+  }
+  const minutes = Math.floor(seconds / 60);
+  if (minutes < 60) {
+    return `${minutes} min${minutes > 1 ? "s" : ""} ago`;
+  }
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) {
+    return `${hours} hour${hours > 1 ? "s" : ""} ago`;
+  }
+  const days = Math.floor(hours / 24);
+  if (days < 7) {
+    return `${days} day${days > 1 ? "s" : ""} ago`;
+  }
+  return date.toLocaleDateString();
+}
+
+renderNotifications();
+
+const loadMoreButton = document.getElementById("load-more");
+loadMoreButton.addEventListener("click", () => {
+  startIndex += MAX_NOTIFICATIONS;
+  renderNotifications();
+});
+
+</script>
+</body>
+</html>

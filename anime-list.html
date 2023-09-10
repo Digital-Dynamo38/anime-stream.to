@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anime List</title>
+    <style>
+       body {
+       font-family: Arial, sans-serif;
+       margin: 0;
+       padding: 0;  
+       }
+       header, nav, main, .search{
+       display: block;
+       width: 100%;
+       width: 1350px;
+       margin: 0 auto;
+       padding: 10px;
+       background-color: #333;
+       } 
+       .search input[type="text"] {
+       padding: 10px;
+       width: 530px;
+       height:30px;
+       border: 1px solid white;
+       border-radius: 45px;
+       outline: none;
+       font-size: 20px;
+       color: black;
+       margin-left:765px;
+       
+       }
+       .search button{
+        width: 40px;
+        height: 45px;
+        border: none;
+        border-radius: 50%;
+        margin-left: -45px;
+        background-color: #3b5998;
+        color: #fff;
+        cursor: pointer;
+        
+       }
+       
+       header {
+       text-align: center;
+       background-color: black;
+       } 
+       h1 {
+       margin: 0;
+       padding: 10px;
+       }
+       nav ul {
+       margin: 0;
+       padding: 10px;
+       list-style: none;
+       display: flex;
+       overflow-x: auto;
+       background-color: #333;
+       max-width: calc(100% - 20px);
+       border-bottom: 1px solid white;
+       font-size: 25px;
+       }
+       nav li {
+       margin: 0 10px;
+       flex: 0 0 calc(33.33% - 20px);
+       max-width: calc(33.33% - 20px);
+       }
+       nav a {
+       display: block;
+       text-align: center;
+       padding: 10px;
+       text-decoration: none;
+       color: white;
+       transition: background-color 0.2s ease-in-out;
+       }
+        nav a:hover {
+        background-color: #333;
+        }
+       footer{
+       text-align: center;
+       }
+       article {
+       margin: 20px 0;
+       padding: 25px;
+       border: 1px solid #ccc;
+       background-color: black;
+       color: white;
+       font-size: 20px;
+       }
+       article a{
+       text-decoration: none;
+       color: blue;
+       }
+ main h2{
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;}
+
+article .details{
+border: 1px solid white;
+float: right;
+padding: 20px;
+width: 600px;
+margin: 5px;
+}
+.details h3{
+text-align: center;
+}
+img{
+ width: 450px;
+ height: 400px;
+ }
+ h1 img{
+ width: 50%;
+ height: 120px;
+ }
+    </style>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+<div class="list">
+    <header>
+      <a href="anime-stream.html" ><h1><img src="logo.png" ></h1></a>
+    </header>
+    <div class="navbar">
+      <a href="anime-stream.html"><i class="fas fa-home"></i> H</a>
+      <a href=""><i class="fas fa-more"></i>more</a>
+      <div class="search" >
+         <input type="text" id="link-text-input" placeholder="search anime..." >
+          <button type="submit" ><i class="fas fa-search"></i></button> 
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#naruto">Naruto</a></li>
+        <li><a href="#onepiece">One Piece</a></li>
+        <li><a href="#attackontitan">Attack on Titan</a></li>
+        <li><a href="#deathnote">Death Note</a></li>
+        <li><a href="#fullmetalalchemist">Fullmetal Alchemist</a></li>
+        <li><a href="#swordartonline">Sword Art Online</a></li>
+        <li><a href="#myheroacademia">My Hero Academia</a></li>
+        <li><a href="#blackbutler">Black Butler</a></li>
+        <li><a href="#hunterxhunter">Hunter x Hunter</a></li>
+        <li><a href="#codegeass">Code Geass</a></li>
+        <li><a href="#deathparade">Death Parade</a></li>
+        <li><a href="#steinsgate">Steins Gate</a></li>
+        <li><a href="#yourlieinapril">Your Lie in April</a></li>
+      </ul>
+    </nav>
+    <main>
+      <article id="naruto">
+       <h2>Naruto</h2>
+       <hr>
+      <img src="https://img.zorores.com/_r/300x400/100/5d/b4/5db400c33f7494bc8ae96f9e634958d0/5db400c33f7494bc8ae96f9e634958d0.jpg" >
+       <div class="details">
+          <h3>DETAILS</h3>
+          <hr>
+           <p>
+              Japanese: ナルト<br><br>
+              Synonyms: NARUTO<br><br>
+              Aired: Oct 3, 2002 to Feb 8, 2007<br><br>
+               Premiered: Fall 2002<br><br>
+               Duration: 23m<br><br>
+              Status: Finished Airing<br><br>
+              MAL Score: 7.89<br><br>
+             Genres: Action, Adventure, Comedy, Martial Arts, Shounen, Super Power<br><br>
+             Studios: Studio Pierrot<br><br>
+             Producers: TV Tokyo, Aniplex, Shueisha, Studio Pierrot, Viz Media<br><br>
+            </p>
+           </div>
+           
+        <p>Moments prior to Naruto Uzumaki's birth, a huge demon known as the Kyuubi, the Nine-Tailed Fox, attacked
+         Konohagakure, the Hidden Leaf Village, and wreaked havoc. In order to put an end to the Kyuubi's rampage,
+          the leader of the village, the Fourth Hokage, sacrificed his life and sealed the monstrous beast inside 
+          the newborn Naruto. Now, Naruto is a hyperactive and knuckle-headed ninja still living in Konohagakure.
+           Shunned because of the Kyuubi inside him, Naruto struggles to find his place in the village, while his 
+           burning desire to become the Hokage of Konohagakure leads him not only to some great new friends,
+            but also some deadly foes.</p>
+        <a href="https://www.crunchyroll.com/naruto">Watch on Crunchyroll</a>
+      </article>
+      <article id="onepiece">
+        <h2>One Piece</h2>
+        <hr>
+        <img src="https://img.zorores.com/_r/300x400/100/54/90/5490cb32786d4f7fef0f40d7266df532/5490cb32786d4f7fef0f40d7266df532.jpg" >
+        <div class="details">
+        <h3>DETAILS</h3>
+        <hr>
+        <p>
+        Japanese: ONE PIECE<br><br>
+        Synonyms: OP<br><br>
+        Aired: Oct 20, 1999 to ?<br><br>
+        Premiered: Fall 1999<br><br>
+        Duration: 24m<br><br>
+        Status: Currently Airing<br><br>
+        MAL Score: 8.62<br><br>
+        Genres: Action, Adventure, Comedy, Drama, Fantasy, Shounen, Super Power<br><br>
+        Studios: Toei Animation<br><br>
+        Producers: Fuji TV, TAP, Shueisha, Toei Animation, Funimation, 4Kids Entertainment<br><br>
+        </p>
+        </div>
+        <p>Gold Roger was known as the "Pirate King," the strongest and most infamous being to have sailed the Grand Line.
+           The capture and execution of Roger by the World Government brought a change throughout the world.
+            His last words before his death revealed the existence of the greatest treasure in the world, One Piece.
+           It was this revelation that brought about the Grand Age of Pirates, men who dreamed of finding One Piece—which
+            promises an unlimited amount of riches and fame—and quite possibly the pinnacle of glory and the title of the
+             Pirate King. Enter Monkey Luffy, a 17-year-old boy who defies your standard definition of a pirate.
+              Rather than the popular persona of a wicked, hardened, toothless pirate ransacking villages for fun,
+               Luffy's reason for being a pirate is one of pure wonder: the thought of an exciting adventure that
+                leads him to intriguing people and ultimately, the promised treasure. Following in the footsteps 
+                of his childhood hero, Luffy and his crew travel across the Grand Line, experiencing crazy adventures,
+                 unveiling dark mysteries and battling strong enemies, all in order to reach the most coveted of all
+                  fortunes—One Piece. </p>
+        <a href="https://www.funimation.com/shows/one-piece/">Watch on Funimation</a>
+      </article>
+      <article id="attackontitan">
+         <h2>Attack on Titan</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/de/bf/debf027d032c6d40b91fab16b2ff9bd4/debf027d032c6d40b91fab16b2ff9bd4.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: 進撃の巨人<br><br>
+         Synonyms: AoT<br><br>
+         Aired: Apr 7, 2013 to Sep 29, 2013<br><br>
+         Premiered: Spring 2013<br><br>
+         Duration: 24m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.52<br><br>
+         Genres: Action, Mystery, Drama, Fantasy, Shounen, Super Power, Military<br><br>
+         Studios: Wit Studio<br><br>
+         Producers: Production I.G, Dentsu, Mainichi Broadcasting System, Pony Canyon, Kodansha, Mad Box,
+                   Pony Canyon Enterprise, Wit Studio, Funimation<br><br>
+         
+         </p>
+         </div>
+         <p>Centuries ago, mankind was slaughtered to near extinction by monstrous humanoid creatures called titans,
+          forcing humans to hide in fear behind enormous concentric walls. What makes these giants truly terrifying
+           is that their taste for human flesh is not born out of hunger but what appears to be out of pleasure.
+            To ensure their survival, the remnants of humanity began living within defensive barriers, resulting
+             in one hundred years without a single titan encounter. However, that fragile calm is soon shattered
+              when a colossal titan manages to breach the supposedly impregnable outer wall, reigniting the fight 
+              for survival against the man-eating abominations. After witnessing a horrific personal loss at the
+               hands of the invading creatures, Eren Yeager dedicates his life to their eradication by enlisting
+                into the Survey Corps, an elite military unit that combats the merciless humanoids outside the
+                 protection of the walls. Based on Hajime Isayama's award-winning manga, Shingeki no Kyojin follows
+                  Eren, along with his adopted sister Mikasa Ackerman and his childhood friend Armin Arlert,
+                   as they join the brutal war against the titans and race to discover a way of defeating them 
+                   before the last walls are breached.</p>
+         <a href="https://zoro.to/attack-on-titan-112">Watch on zoro.to </a>
+      </article>
+      <article id="deathnote">
+         <h2>Death Note</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/5e/61/5e61f3e7c0045e46b670d31a5bb39c68/5e61f3e7c0045e46b670d31a5bb39c68.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: デスノート<br><br>
+         Synonyms: DN<br><br>
+         Aired: Oct 4, 2006 to Jun 27, 2007<br><br>
+         Premiered: Fall 2006<br><br>
+         Duration: 23m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.63<br><br>
+         Genres: Mystery, Shounen, Supernatural, Police, Psychological, Thriller<br><br>
+         Studios: Madhouse<br><br>
+         Producers: VAP, Konami, Ashi Production, Nippon Television Network, Shueisha, Madhouse, Viz Media
+         
+         </p>
+         </div>
+         <p>A shinigami, as a god of death, can kill any person—provided they see their victim's face and write their victim's name in a notebook called a Death Note. One day, Ryuk, bored by the shinigami lifestyle and interested in seeing how a human would use a Death Note, drops one into the human realm. High school student and prodigy Light Yagami stumbles upon the Death Note and—since he deplores the state of the world—tests the deadly notebook by writing a criminal's name in it. When the criminal dies immediately following his experiment with the Death Note, Light is greatly surprised and quickly recognizes how devastating the power that has fallen into his hands could be. With this divine capability, Light decides to extinguish all criminals in order to build a new world where crime does not exist and people worship him as a god. Police, however, quickly discover that a serial killer is targeting criminals and, consequently, try to apprehend the culprit. To do this, the Japanese investigators count on the assistance of the best detective in the world: a young and eccentric man known only by the name of L.</p>
+         <a href="https://zoro.to/death-note-60">Watch on zoro.to </a>
+      </article>
+      <article id="fullmetalalchemist">
+          <h2>Fullmetal Alchemist: Brotherhood</h2>
+          <hr>
+          <img src="https://img.zorores.com/_r/300x400/100/0d/2d/0d2d0a1d4276e7e2595702dc4cebbda9/0d2d0a1d4276e7e2595702dc4cebbda9.jpeg" >
+          <div class="details">
+          <h3>DETAILS</h3>
+          <hr>
+          <p>
+          Japanese: 鋼の錬金術師 FULLMETAL ALCHEMIST<br><br>
+          Synonyms: Hagane no Renkinjutsushi: Fullmetal Alchemist, Fullmetal Alchemist (2009), FMA, FMAB<br><br>
+          Aired: Apr 5, 2009 to Jul 4, 2010<br><br>
+          Premiered: Spring 2009<br><br>
+          Duration: 24m<br><br>
+          Status: Finished Airing<br><br>
+          MAL Score: 9.15<br><br>
+          Genres: Action, Adventure, Comedy, Drama, Fantasy, Magic, Shounen, Military<br><br>
+          Studios: Bones<br><br>
+          Producers: Aniplex, Square Enix, Mainichi Broadcasting System, Studio Moriken, Bones, Funimation,
+                 Aniplex of America
+          
+          </p>
+          </div>
+         <p>"In order for something to be obtained, something of equal value must be lost." Alchemy is bound by this Law
+          of Equivalent Exchange—something the young brothers Edward and Alphonse Elric only realize after attempting
+           human transmutation: the one forbidden act of alchemy. They pay a terrible price for their transgression—Edward 
+           loses his left leg, Alphonse his physical body. It is only by the desperate sacrifice of Edward's right arm that 
+           he is able to affix Alphonse's soul to a suit of armor. Devastated and alone, it is the hope that they would both
+            eventually return to their original bodies that gives Edward the inspiration to obtain metal limbs called
+             "automail" and become a state alchemist, the Fullmetal Alchemist. Three years of searching later,
+              the brothers seek the Philosopher's Stone, a mythical relic that allows an alchemist to overcome the Law
+               of Equivalent Exchange. Even with military allies Colonel Roy Mustang, Lieutenant Riza Hawkeye,
+                and Lieutenant Colonel Maes Hughes on their side, the brothers find themselves caught up in a nationwide
+                 conspiracy that leads them not only to the true nature of the elusive Philosopher's Stone, but their country's
+                  murky history as well. In between finding a serial killer and racing against time, Edward and Alphonse must ask 
+                  themselves if what they are doing will make them human again... or take away their humanity.</p>
+         <a href="https://zoro.to/fullmetal-alchemist-brotherhood-1">Watch on zoro.to</a>
+      </article>
+      <article id="swordartonline">
+         <h2>Sword Art Online</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/90/dc/90dca175561e61180622bc79218104cb/90dca175561e61180622bc79218104cb.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: ソードアート・オンライン<br><br>
+         Synonyms: S.A.O, SAO<br><br>
+         Aired: Jul 8, 2012 to Dec 23, 2012<br><br>
+         Premiered: Summer 2012<br><br>
+         Duration: 23m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 7.3<br><br>
+         Genres: Action, Adventure, Fantasy, Game, Romance, Isekai<br><br>
+         Studios: A-1 Pictures<br><br>
+         Producers: Aniplex, Genco, DAX Production, ASCII Media Works, Bandai Namco Games, A-1 Pictures, 
+                  Aniplex of America
+         </p>
+         </div>
+         <p>In the year 2022, virtual reality has progressed by leaps and bounds, and a massive online role-playing
+          game called Sword Art Online (SAO) is launched. With the aid of "NerveGear" technology, players can control
+           their avatars within the game using nothing but their own thoughts. Kazuto Kirigaya, nicknamed "Kirito,"
+            is among the lucky few enthusiasts who get their hands on the first shipment of the game. He logs in to
+             find himself, with ten-thousand others, in the scenic and elaborate world of Aincrad, one full of fantastic
+              medieval weapons and gruesome monsters. However, in a cruel turn of events, the players soon realize they
+               cannot log out; the game's creator has trapped them in his new world until they complete all one hundred 
+               levels of the game. In order to escape Aincrad, Kirito will now have to interact and cooperate with his 
+               fellow players. Some are allies, while others are foes, like Asuna Yuuki, who commands the leading group 
+               attempting to escape from the ruthless game. To make matters worse, Sword Art Online is not all fun and 
+               games: if they die in Aincrad, they die in real life. Kirito must adapt to his new reality, fight for his
+                survival, and hopefully break free from his virtual hell.</p>
+         <a href="https://zoro.to/sword-art-online-2274">Watch on zoro.to </a>
+      </article>
+      <article id="myheroacademia">
+         <h2>MY Hero Academia</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/d1/ae/d1ae1f3d3324e24dfdfa64e4c2e687f8/d1ae1f3d3324e24dfdfa64e4c2e687f8.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: 僕のヒーローアカデミア<br><br>
+         Aired: Apr 3, 2016 to Jun 26, 2016<br><br>
+         Premiered: Spring 2016<br><br>
+         Duration: 24m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.18<br><br>
+         Genres: Action, Comedy, School, Shounen, Super Power<br><br>
+         Studios: Bones<br><br>
+         Producers: Dentsu, Mainichi Broadcasting System, Movic, TOHO animation, Shueisha, Bones, Funimation
+         </p>
+         </div>
+          <p>The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years,
+           with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting.
+            This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.
+             Since he was a child, the ambitious middle schooler has wanted nothing more than to be a hero.
+              Izuku's unfair fate leaves him admiring heroes and taking notes on them whenever he can. But it seems that
+               his persistence has borne some fruit: Izuku meets the number one hero and his personal idol, All Might.
+                All Might's quirk is a unique ability that can be inherited, and he has chosen Izuku to be his successor!
+                 Enduring many months of grueling training, Izuku enrolls in UA High, a prestigious high school famous for
+                  its excellent hero training program, and this year's freshmen look especially promising. With his bizarre
+                   but talented classmates and the looming threat of a villainous organization, Izuku will soon learn what
+                    it really means to be a hero.</p>
+         <a href="https://zoro.to/my-hero-academia-322">Watch on zoro.to</a>
+      </article>
+      <article id="blackbutler">
+         <h2>Black Butler</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/7a/df/7adfc4522e111c0b48c70eeb435c912f/7adfc4522e111c0b48c70eeb435c912f.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: 黒執事<br><br>
+         Synonyms: Kuro Shitsuji, Kuroshitsuzi<br><br>
+         Aired: Oct 3, 2008 to Mar 27, 2009<br><br>
+         Premiered: Fall 2008<br><br>
+         Duration: 24m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 7.79<br><br>
+         Genres: Action, Comedy, Demons, Mystery, Historical, Shounen, Supernatural<br><br>
+         Studios: A-1 Pictures<br><br>
+         Producers: Aniplex, Square Enix, Yomiko Advertising, Mainichi Broadcasting System, Movic, Trinity Sound,
+                  A-1 Pictures, Funimation, Aniplex of America
+         
+         </p>
+         </div>
+         <p>Young Ciel Phantomhive is known as "the Queen's Guard Dog," taking care of the many unsettling events
+          that occur in Victorian England for Her Majesty. Aided by Sebastian Michaelis, his loyal butler with seemingly 
+          inhuman abilities, Ciel uses whatever means necessary to get the job done. But is there more to this black-clad 
+          butler than meets the eye? In Ciel's past lies a secret tragedy that enveloped him in perennial darkness—during
+           one of his bleakest moments, he formed a contract with Sebastian, a demon, bargaining his soul in exchange for
+            vengeance upon those who wronged him. Today, not only is Sebastian one hell of a butler, but he is also the 
+            perfect servant to carry out his master's orders—all the while anticipating the delicious meal he will 
+            eventually make of Ciel's soul. As the two work to unravel the mystery behind Ciel's chain of misfortunes,
+             a bond forms between them that neither heaven nor hell can tear apart.</p>
+         <a href="https://zoro.to/black-butler-854">Watch on zoro.to </a>
+      </article>
+      <article id="hunterxhunter">
+          <h2>Hunter X Hunter</h2>
+          <hr>
+          <img src="https://img.zorores.com/_r/300x400/100/99/3c/993c0361975cce4c7fbb11f8558f9664/993c0361975cce4c7fbb11f8558f9664.jpg" >
+          <div class="details">
+          <h3>DETAILS</h3>
+          <hr>
+          <p>
+          Japanese: HUNTER×HUNTER（ハンター×ハンター）<br><br>
+          Synonyms: HxH (2011)<br><br>
+          Aired: Oct 2, 2011 to Sep 24, 2014<br><br>
+          Premiered: Fall 2011<br><br>
+          Duration: 23m<br><br>
+          Status: Finished Airing<br><br>
+          MAL Score: 9.05<br><br>
+          Genres: Action, Adventure, Fantasy, Shounen, Super Power<br><br>
+          Studios: Madhouse<br><br>
+          Producers: VAP, Nippon Television Network, Shueisha, Madhouse, Viz Media
+          
+          </p>
+          </div>
+          <p>Hunter x Hunter is set in a world where Hunters exist to perform all manner of dangerous tasks like capturing 
+          criminals and bravely searching for lost treasures in uncharted territories. Twelve-year-old Gon Freecss is
+           determined to become the best Hunter possible in hopes of finding his father, who was a Hunter himself and had 
+           long ago abandoned his young son. However, Gon soon realizes the path to achieving his goals is far more 
+           challenging than he could have ever imagined. Along the way to becoming an official Hunter, Gon befriends 
+           the lively doctor-in-training Leorio, vengeful Kurapika, and rebellious ex-assassin Killua. To attain their own 
+           goals and desires, together the four of them take the Hunter Exam, notorious for its low success rate and high 
+           probability of death. Throughout their journey, Gon and his friends embark on an adventure that puts them through 
+           many hardships and struggles. They will meet a plethora of monsters, creatures, and characters—all while learning 
+           what being a Hunter truly means. </p>
+          <a href="https://zoro.to/hunter-x-hunter-2?ref=search">Watch on zoro.to </a>
+      </article>
+      <article id="codegeass">
+         <h2>Code Geass</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/b7/b1/b7b180ff8404f0475e60a4f3a0f5bd20/b7b180ff8404f0475e60a4f3a0f5bd20.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: コードギアス 反逆のルルーシュ<br><br>
+         Aired: Oct 6, 2006 to Jul 29, 2007<br><br>
+         Premiered: Fall 2006<br><br>
+         Duration: 24m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.71<br><br>
+         Genres: Action, Drama, Mecha, School, Sci-Fi, Super power, Military<br><br>
+         Studios: Sunrise<br><br>
+         Producers: Bandai Visual, Mainichi Broadcasting System, Bandai, Sony Music Entertainment, Bandai Namco Entertainment,
+                  Hakuhodo DY Media Partners, Sunrise, Funimation, Bandai Entertainment
+         
+         </p>
+         </div>
+         <p>In the year 2010, the Holy Empire of Britannia is establishing itself as a dominant military nation,
+          starting with the conquest of Japan. Renamed to Area 11 after its swift defeat, Japan has seen significant 
+          resistance against these tyrants in an attempt to regain independence. Lelouch Lamperouge, a Britannian student,
+           unfortunately finds himself caught in a crossfire between the Britannian and the Area 11 rebel armed forces. 
+           He is able to escape, however, thanks to the timely appearance of a mysterious girl named C.C., who bestows upon
+            him Geass, the "Power of Kings." Realizing the vast potential of his newfound "power of absolute obedience,"
+             Lelouch embarks upon a perilous journey as the masked vigilante known as Zero, leading a merciless onslaught
+              against Britannia in order to get revenge once and for all. </p>
+         <a href="https://zoro.to/code-geass-lelouch-of-the-rebellion-41">Watch on zoro.to </a>
+      </article>
+      <article id="deathparade">
+         <h2>Death Parade</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/99/a4/99a44ff5d886a06213eb9c386f76f450/99a44ff5d886a06213eb9c386f76f450.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: デス・パレード
+         Aired: Jan 10, 2015 to Mar 28, 2015<br><br>
+         Premiered: Winter 2015<br><br>
+         Duration: 23m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.21<br><br>
+         Genres: Mystery, Drama, Game, Psychological, Thriller<br><br>
+         Studios: Madhouse<br><br>
+         Producers: VAP, DAX Production, Nippon Television Network, Madhouse, Funimation<br><br>
+         </p>
+         </div>
+         <p>After death, there is no heaven or hell, only a bar that stands between reincarnation and oblivion.
+          There the attendant will, one after another, challenge pairs of the recently deceased to a random game in
+           which their fate of either ascending into reincarnation or falling into the void will be wagered.
+           Whether it's bowling, darts, air hockey, or anything in between, each person's true nature will be 
+           revealed in a ghastly parade of death and memories, dancing to the whims of the bar's master.
+            Welcome to Quindecim, where Decim, arbiter of the afterlife, awaits! Death Parade expands upon the 
+            original one-shot intended to train young animators. It follows yet more people receiving judgment—until 
+            a strange, black-haired guest causes Decim to begin questioning his own rulings.</p>
+         <a href="https://zoro.to/death-parade-292?ref=search">Watch on zoro.to </a>
+      </article>
+      <article id="steinsgate">
+         <h2>Steins; gate</h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/68/35/6835ff30fa46da5612e3adc81f51724e/6835ff30fa46da5612e3adc81f51724e.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: STEINS;GATE<br><br>
+         Aired: Apr 6, 2011 to Sep 14, 2011<br><br>
+         Premiered: Spring 2011<br><br>
+         Duration: 24m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 9.09<br><br>
+         Genres: Drama, Sci-Fi, Psychological, Thriller, Isekai<br><br>
+         Studios: White Fox<br><br>
+         Producers: Frontier Works, Media Factory, Movic, AT-X, Kadokawa Pictures Japan, Nitroplus, White Fox, Funimation
+         </p>
+         </div>
+         <p>The self-proclaimed mad scientist Rintarou Okabe rents out a room in a rickety old building in Akihabara, 
+         where he indulges himself in his hobby of inventing prospective "future gadgets" with fellow 
+         lab members: Mayuri Shiina, his air-headed childhood friend, and Hashida Itaru, a perverted hacker
+          nicknamed "Daru." The three pass the time by tinkering with their most promising contraption yet, 
+          a machine dubbed the "Phone Microwave," which performs the strange function of morphing bananas into 
+          piles of green gel. Though miraculous in itself, the phenomenon doesn't provide anything concrete in 
+          Okabe's search for a scientific breakthrough; that is, until the lab members are spurred into action 
+          by a string of mysterious happenings before stumbling upon an unexpected success—the Phone Microwave can
+           send emails to the past, altering the flow of history. Adapted from the critically acclaimed visual novel
+            by 5pb. and Nitroplus, Steins;Gate takes Okabe through the depths of scientific theory and practicality.
+             Forced across the diverging threads of past and present, Okabe must shoulder the burdens that come with
+              holding the key to the realm of time.</p>
+         <a href="https://zoro.to/steinsgate-3?ref=search">Watch on zoro.to </a>
+      </article>
+      <article id="yourlieinapril">
+         <h2>Your Lie In April </h2>
+         <hr>
+         <img src="https://img.zorores.com/_r/300x400/100/17/13/1713f98ec94d824b3a34ef0f4ace633f/1713f98ec94d824b3a34ef0f4ace633f.jpg" >
+         <div class="details">
+         <h3>DETAILS</h3>
+         <hr>
+         <p>
+         Japanese: 四月は君の嘘<br><br>
+         Aired: Oct 10, 2014 to Mar 20, 2015<br><br>
+         Premiered: Fall 2014<br><br>
+         Duration: 22m<br><br>
+         Status: Finished Airing<br><br>
+         MAL Score: 8.68<br><br>
+         Genres: Drama, Music, Romance, School, Shounen<br><br>
+         Studios: A-1 Pictures<br><br>
+         Producers: Aniplex, Dentsu, Kodansha, Fuji TV, Kyoraku Industrial Holdings, A-1 Pictures, Aniplex of America
+         </p>
+         </div>
+         <p>Music accompanies the path of the human metronome, the prodigious pianist Kousei Arima. 
+         But after the passing of his mother, Saki Arima, Kousei falls into a downward spiral, rendering him unable 
+         to hear the sound of his own piano. Two years later, Kousei still avoids the piano, leaving behind his admirers
+          and rivals, and lives a colorless life alongside his friends Tsubaki Sawabe and Ryouta Watari. However,
+           everything changes when he meets a beautiful violinist, Kaori Miyazono, who stirs up his world and sets 
+           him on a journey to face music again. Based on the manga series of the same name,
+            Shigatsu wa Kimi no Uso approaches the story of Kousei's recovery as he discovers that music
+             is more than playing each note perfectly, and a single melody can bring in the fresh spring air of April.</p>
+         <a href="https://zoro.to/your-lie-in-april-31?ref=search">Watch on zoro.to </a>
+      </article>
+    </main>
+</div>
+<script type="text/javascript">
+
+</script>
+  </body>
+</html>

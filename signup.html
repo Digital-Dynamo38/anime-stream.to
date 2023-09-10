@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html  >
+<head>
+<title>sign up</title>
+<style type="text/css">
+body {
+margin: 0;
+padding: 0;
+background-image:url("https://wallpapers.com/images/featured-full/beautiful-scenery-wnxju2647uqrcccv.jpg");
+background-image:url("beautiful-scenery.jpg");
+background-size: cover;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.sign-up{
+width: 400px;
+text-align: center;
+background-color: #081b29;
+color: white;
+padding: 25px;
+border: none;
+border-radius: 20px;
+}
+
+    .blur{
+    filter: blur(5px);
+    }
+    .sign-up .blur{
+    backdrop-filter: blur(10px);
+    }
+.sign-up h1{
+margin-bottom: 18px;
+}
+.input{
+border: 1px solid black;
+border-radius: 20px;
+padding: 10px;
+margin: 10px 0;
+width: 95%;
+outline: none;
+}
+
+button {
+color: white;
+width: 95%;
+padding: 10px;
+font-size: 15px;
+border-radius: 20px;
+margin: 10px 0;
+border: none;
+outline: none;
+cursor: pointer;
+}
+.sign-btn{
+background-color:#1c8adb;
+}
+a{
+text-decoration: none;
+color: blue;
+}
+hr{
+margin-top: 20px;
+width: 80%;
+}
+.or{
+background: #081b29;
+width: 30px;
+margin: -19px auto 10px;
+}
+
+.icon{
+width: 90px;
+margin-top: -65px;
+}
+.google-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #21afde;
+}
+.google-btn img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+h1 img{
+width: 100%;
+height: 80px;
+margin-top: 0;
+border-bottom: 0.5px solid white;
+}
+
+.loading-spinner {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.spinner {
+	border:3px solid white;
+	border-top: 2.5px solid red;
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+	animation: spin 1s linear infinite;
+	}
+	
+	@keyframes spin {
+	to {
+	transform: rotate(360deg);
+	}
+	}
+
+</style>
+</head>
+<body>
+  <div class="sign-up" >
+    <img src="icon.png" class="icon" >
+<a href="anime-stream.html" ><h1><img src="logo.png"  ></h1></a>
+<form>
+<input type="email" placeholder="E-MAIL" class="input" id="email" required>
+<input type="password" placeholder="PASSWORD" class="input" id="password" required  >
+ <span id="error"></span>
+<p><span><input type="checkbox" id="check" required></span>I agreee to the <a href="#">terms</a> and <a href="#">condition</a>.</p>
+<button type="submit" class="sign-btn" onclick="return validatePassword();"  >SIGN UP</button>
+<hr>
+<p class="or" >OR</p>
+<button type="button" class="google-btn" id="continue-with-google" data-href-placeholder="https://accounts.google.com/o/oauth2/v2/auth?client_id=[YOUR_CLIENT_ID]&response_type=code&scope=https://www.googleapis.com/auth/userinfo.email&redirect_uri=[YOUR_REDIRECT_URI]&state=[YOUR_STATE]"><img src="5847f9cbcef1014c0b5e48c8.png" >   Continue with GOOGLE</button>
+<p>Already have an account ?<a href="lg.html" >Sign in</a></p>
+</form>
+</div>
+  <div class="loading-spinner">
+  <div class="spinner"></div>
+  </div>
+<script type="text/javascript">
+  function validatePassword() {
+  let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+  let checkbox = document.getElementById('check');
+  let error = document.getElementById('error');
+
+  // Validate email address
+  let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (email.length === 0) {
+    error.innerHTML = "Email must not be empty.";
+    error.style.color = "red";
+    return false;
+  } else if (!emailRegex.test(email)) {
+    error.innerHTML = "Please enter a valid email address.";
+    error.style.color = "red";
+    return false;
+  }
+
+  // Validate password
+  if(password.length == 0){
+    error.innerHTML = "Password must not be empty.";
+    error.style.color = "red";
+    return false;
+
+  }
+  else if (password.length < 8) {
+    error.innerHTML = "Password must be at least 8 characters long.";
+    error.style.color = "red";
+    return false;
+  }
+
+  // Validate checkbox
+  if (!checkbox.checked) {
+    error.innerHTML = "You must agree to the terms and conditions.";
+    error.style.color = "red";
+    return false;
+  }
+
+  // Clear error message if validation passes
+  error.innerHTML = "";
+  return true;
+}
+
+
+  document.getElementById("continue-with-google").addEventListener("click", function() {
+  var clientId = "YOUR_CLIENT_ID";
+  var redirectUri = encodeURIComponent("YOUR_REDIRECT_URI");
+  var state = encodeURIComponent("YOUR_STATE");
+  var href = document.getElementById("continue-with-google").getAttribute("data-href-placeholder")
+  .replace("[YOUR_CLIENT_ID]", clientId)
+  .replace("[YOUR_REDIRECT_URI]", redirectUri)
+  .replace("[YOUR_STATE]", state);
+  
+  window.location.href = href;
+  });
+  const form = document.querySelector('.sign-up');
+  const loadingSpinner = document.querySelector('.loading-spinner');
+  
+  form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  form.classList.add('blur');
+  loadingSpinner.style.display = 'flex'; 
+  
+  setTimeout(() => {
+  window.location.href = 'lg.html';
+  }, 3000);
+  });
+  
+  </script>
+</body>
+</html>
